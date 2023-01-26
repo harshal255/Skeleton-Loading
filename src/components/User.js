@@ -11,11 +11,11 @@ const User = () => {
             const res = await fetch("https://jsonplaceholder.typicode.com/users");
             const data = await res.json();
             setProfile(data)
-            console.log(data);
+            // console.log(data);
 
 
         }, 3000)
-    })
+    },[])
     return (
         <>
             <div className='user'>

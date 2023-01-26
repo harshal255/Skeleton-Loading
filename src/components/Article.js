@@ -10,11 +10,11 @@ const Article = () => {
             const res = await fetch("https://jsonplaceholder.typicode.com/posts");
             const data = await res.json();
             setArticle(data)
-            console.log(data);
+            // console.log(data);
 
 
         }, 3000)
-    })
+    }, [])
     return (
         <div className='article'>
             <h2> Article</h2>
@@ -25,15 +25,15 @@ const Article = () => {
 
 
             {article && article.map((article) => (
-                <>
 
 
-                    <div className='article' key={article.id}>
-                        <h3>{article.title}</h3>
-                        <p>{article.body}</p>
 
-                    </div>
-                </>
+                <div className='article' key={article.id}>
+                    <h3>{article.title}</h3>
+                    <p>{article.body}</p>
+
+                </div>
+
 
             )
 
